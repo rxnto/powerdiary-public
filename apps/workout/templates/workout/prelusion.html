@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PowerDiary2</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    {% load static %}
+    <link rel="icon" href="{% static 'workout/images/fav.png' %}">
+    <link rel="stylesheet" href="{% static 'workout/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'workout/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'workout/css/font.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,700">
+    <link rel="stylesheet" href="{% static 'workout/css/style.red.css' %}" id="theme-stylesheet">
+    <link rel="stylesheet" href="{% static 'workout/css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'workout/css/all.min.css' %}">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="search-panel">
+                <div class="search-inner d-flex align-items-center justify-content-center">
+                    <div class="close-btn">Close <i class="fa fa-close"></i></div>
+                    <form id="searchForm" action="#">
+                        <div class="form-group">
+                            <input type="search" name="search" placeholder="What are you searching for...">
+                            <button type="submit" class="submit">Search</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="container-fluid d-flex align-items-center justify-content-between ">
+                <div class="navbar-header">
+                    <a href="/dashboard" class="navbar-brand">
+                        <div class="brand-text brand-big visible text-uppercase"><strong
+                                class="text-primary">Power</strong><strong>Diary</strong><strong class="text-primary">2</strong></div>
+                        <div class="brand-text brand-sm"><img src="{% static 'workout/images/fav_navbar.png' %}"
+                                alt="Pd" class="fav_navbar"></div>
+                    </a>
+                </div>
+                <ul class="right-menu list-inline no-margin-bottom">
+                    <li class="list-inline-item"><a href="#" class="search-open nav-link"><i
+                                class="icon-magnifying-glass-browser"></i></a></li>
+                    <li class="list-inline-item logout"><a id="logout" href="/user/logout" class="nav-link">ログアウト <i
+                                class="icon-logout"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="d-flex align-items-stretch ">
+        <nav id="sidebar" class="shrinked"><!-- shrinked追加 -->
+            <div class="sidebar-header d-flex align-items-center "></div>
+            <ul class="list-unstyled">
+                <li><a href="/dashboard"><i class="icon-home"></i>ホーム</a></li>
+                <li><a href="/workout"><i class="fa fa-plus-square"></i>記録</a></li>
+                <li> <a href="/workouts"><i class="fa fa-th-list"></i>一覧</a></li>
+                <li><a href="/model"><i class="fa fa-child"></i>模型</a></li>
+                <li><a href="/history"><i class="fa fa-list"></i>履歴</a></li>
+                <li><a href="/calc"><i class="fa fa-calculator"></i>計算</a></li>
+                <li class="active"><a href="/prelusion"><i class="fa fa-info-circle"></i>紹介</a></li>
+                <li><a href="/chat"><i class="fa fa-comments"></i>チャット</a></li>
+            </ul>
+        </nav>
+        <div class="page-content active"><!-- active化 -->
+            <div class="page-header">
+                <div class="container-fluid">
+                    <h2 class="h5 no-margin-bottom">Prelusion</h2>
+                </div>
+            </div>
+            <section class="no-padding-bottom">
+                <select class="category-filter" id="category-filter">
+                    <option value="all">全て</option>
+                    <option value="equip">器具</option>
+                    <option value="foods">フード</option>
+                </select>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12" data-category="equip">
+                            <div class="card mb-4" id="precard-container">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img src="{% static 'workout/images/product/product1.png' %}"
+                                            class="card-img-top" alt="Product 1" quality="100">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">WASAI ぶら下がり健康器 バーベルスタンド BS312</h5>
+                                            <p class="card-text">商品の説明や特徴などをここに記述します。</p>
+                                            <a href="https://www.wasaico.jp/product-page/%E3%81%B6%E3%82%89%E4%B8%8B%E3%81%8C%E3%82%8A%E5%81%A5%E5%BA%B7%E5%99%A8-%E3%83%90%E3%83%BC%E3%83%99%E3%83%AB%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89-bs312"
+                                                class="btn btn-primary" target="_blank" id="btn1">公式サイト</a>
+
+                                            <a href="https://www.google.com/aclk?sa=l&ai=DChcSEwi9jKiDzfCDAxWv2EwCHe_xBYoYABAFGgJ0bQ&ase=2&gclid=Cj0KCQiAwbitBhDIARIsABfFYIKoEyObIJGnsvNF_sc7AbJpwRZqmeQbuBTMzqOgdceSXGuXzGGdmg0aAhOREALw_wcB&sig=AOD64_0ukKTL6ON9KCeTlMPwjEkXsRI2Jg&ctype=5&nis=6&adurl&ved=2ahUKEwiflpqDzfCDAxUrXvUHHfwaBR4Qvhd6BAgBEGE"
+                                                class="btn btn-primary" target="_blank" id="btn2">Amazon</a>
+
+                                            <a href="https://www.google.com/aclk?sa=l&ai=DChcSEwi9jKiDzfCDAxWv2EwCHe_xBYoYABALGgJ0bQ&ase=2&gclid=Cj0KCQiAwbitBhDIARIsABfFYIJdPCed2x1gx-1C61f383XTo2yjCfbyPy1WsSwPecYol1mG4MtGvPwaArb4EALw_wcB&sig=AOD64_3X47vUQ2SmNBBhCA2pspolBLAnlQ&ctype=5&nis=6&adurl&ved=2ahUKEwiflpqDzfCDAxUrXvUHHfwaBR4Qvhd6BAgBEHA"
+                                                class="btn btn-primary" target="_blank" id="btn3">楽天市場</a>
+
+                                            <a href="https://www.google.com/aclk?sa=l&ai=DChcSEwj-kPT4lfWDAxWe1hYFHdTdBk4YABABGgJ0bA&ase=2&gclid=CjwKCAiA5L2tBhBTEiwAdSxJX-aDJW85awdWrmHZtJpKaiKTufZCt75sTYHANGERbXK9NivhXnnVTBoCYzoQAvD_BwE&sig=AOD64_0mrl9HUMN-ES5zfATXggqgq9V3qA&ctype=5&nis=6&adurl&ved=2ahUKEwjk3uT4lfWDAxUST_UHHQryAPYQvhd6BAgBEFE"
+                                                class="btn btn-primary" target="_blank" id="btn4">Yahoo!</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12" data-category="equip">
+                            <div class="card mb-4" id="precard-container">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img src="{% static 'workout/images/product/product2.png' %}"
+                                            class="card-img-top" alt="Product 2" quality="50">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">LEEKEY レジスタンスチューブ 筋トレチューブ 懸垂チューブ</h5>
+                                            <p class="card-text">商品の説明や特徴などをここに記述します。</p>
+                                            <a href="https://www.amazon.co.jp/LEEKEY-%E3%83%88%E3%83%AC%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0%E3%83%81%E3%83%A5%E3%83%BC%E3%83%96-%E7%AD%8B%E3%83%88%E3%83%AC%E3%83%81%E3%83%A5%E3%83%BC%E3%83%96-%E6%87%B8%E5%9E%82%E3%83%81%E3%83%A5%E3%83%BC%E3%83%96/dp/B0CGX52BX5?th=1"
+                                                class="btn btn-primary" target="_blank" id="btn2">Amazon</a>
+
+                                            <!-- <a href="/product/1" class="btn btn-primary" target="_blank"
+                                                id="btn3">楽天市場</a> -->
+
+                                            <a href="https://store.shopping.yahoo.co.jp/igstore2/s-B07DR9BT5G-20231007.html"
+                                                class="btn btn-primary" target="_blank" id="btn4">Yahoo!</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12" data-category="equip">
+                            <div class="card mb-4" id="precard-container">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img src="{% static 'workout/images/product/product3.png' %}"
+                                            class="card-img-top" alt="Product 3" quality="50">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">NORTHDEER 可変式ダンベル 10kg×2 通常版</h5>
+                                            <p class="card-text">商品の説明や特徴などをここに記述します。</p>
+                                            <a href="https://www.northdeer.jp/products/%E3%82%B9%E3%83%81%E3%83%BC%E3%83%AB%E8%A3%BD%E5%8F%AF%E5%A4%89%E5%BC%8F%E3%83%80%E3%83%B3%E3%83%99%E3%83%AB?variant=40253611835557"
+                                                class="btn btn-primary" target="_blank" id="btn1">公式サイト</a>
+
+                                            <a href="https://www.amazon.co.jp/%E3%82%B9%E3%83%81%E3%83%BC%E3%83%AB%E8%A3%BD-2-5kg-7-5kg-%E9%95%9C%E9%9D%A2%E3%81%AE%E4%BB%95%E4%B8%8A%E3%81%92-%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%A0%E3%83%A1%E3%83%83%E3%82%AD/dp/B08RN73214?th=1"
+                                                class="btn btn-primary" target="_blank" id="btn2">Amazon</a>
+
+                                            <a href="https://item.rakuten.co.jp/northdeer/n020/?variantId=N020-20"
+                                                class="btn btn-primary" target="_blank" id="btn3">楽天市場</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12" data-category="equip">
+                            <div class="card mb-4" id="precard-container">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img src="{% static 'workout/images/product/product4.png' %}"
+                                            class="card-img-top" alt="Product 4" quality="50">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Schiek リストラップ 24インチ フリーウェイトトレーニング用</h5>
+                                            <p class="card-text">商品の説明や特徴などをここに記述します。</p>
+                                            <a href="https://schiek.com/" class="btn btn-primary" target="_blank"
+                                                id="btn1">公式サイト</a>
+
+                                            <a href="https://www.google.com/aclk?sa=l&ai=DChcSEwjZrML9-_WDAxVKzxYFHbwzDpAYABADGgJ0bA&ase=2&gclid=Cj0KCQiAh8OtBhCQARIsAIkWb6-4w9Xz6O7aFOppE-TgC08hU9o1Wdw2ejSjnaoEsfjdQpGENe7dqmEaAlAiEALw_wcB&sig=AOD64_1ETciPk36zrfJhwgKwm0AnIkR9Hg&ctype=5&nis=6&adurl&ved=2ahUKEwil_bX9-_WDAxWH0DQHHWIXAxMQvhd6BAgBEF4"
+                                                class="btn btn-primary" target="_blank" id="btn2">Amazon</a>
+
+                                            <a href="https://www.google.com/aclk?sa=l&ai=DChcSEwi4_aXN_PWDAxXILXsHHb8DBhsYABAHGgJ0bQ&ase=2&gclid=Cj0KCQiAh8OtBhCQARIsAIkWb6_m0tQ04YzUaCkU6oqWFqBKKQMMScYLIre9Jy-IyzfeyXvN3CihdO4aAk9CEALw_wcB&sig=AOD64_3BqwT8YKT8ft-QBeAwiSLR6kvtEg&ctype=5&q=&nis=4&ved=0ahUKEwjxt6HN_PWDAxW2afUHHehTAOEQww8IkAg&adurl="
+                                                class="btn btn-primary" target="_blank" id="btn4">Yahoo!</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12" data-category="equip">
+                            <div class="card mb-4" id="precard-container">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img src="{% static 'workout/images/product/product5.png' %}"
+                                            class="card-img-top" alt="Product 5" quality="50">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">STEADY ディップススタンド ST126</h5>
+                                            <p class="card-text">商品の説明や特徴などをここに記述します。</p>
+                                            <a href="https://steadyjapan.com/collections/%E6%87%B8%E5%9E%82-%E3%83%87%E3%82%A3%E3%83%83%E3%83%97%E3%82%B9%E5%99%A8%E5%85%B7/products/st126"
+                                                class="btn btn-primary" target="_blank" id="btn1">公式サイト</a>
+
+                                            <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjLgJrg__WDAxVOZA8CHVebCHYYABAFGgJ0Yg&ase=2&gclid=Cj0KCQiAh8OtBhCQARIsAIkWb684eO8NdWg00KJgeMrWDSoBF292SZj6PiwWmSLd06MUjKdUlC7fY3kaAjy8EALw_wcB&ohost=www.google.com&cid=CAESU-D2MndzFFmLZtztjw9hsIDLNf1MMOaS1KSgjpnuBG1ULUJ3nf8MwMlznQ-7jsiMKp31gXpngMhbTudvj0Z5xamfjya55WUVIb9Hes42Lzk6ued5&sig=AOD64_1IJp2YcGv6R3euboe2fe7vft-hcg&ctype=5&q=&nis=4&ved=2ahUKEwjZv5Hg__WDAxWm2DQHHU9nCZoQ9aACKAB6BAgBEAw&adurl="
+                                                class="btn btn-primary" target="_blank" id="btn2">Amazon</a>
+
+                                            <a href="https://item.rakuten.co.jp/tkms/st126/" class="btn btn-primary"
+                                                target="_blank" id="btn3">楽天市場</a>
+
+                                            <a href="https://store.shopping.yahoo.co.jp/madurez/st126.html"
+                                                class="btn btn-primary" target="_blank" id="btn4">Yahoo!</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12" data-category="foods">
+                            <div class="card mb-4" id="precard-container">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img src="{% static 'workout/images/product/product6.png' %}"
+                                            class="card-img-top" alt="Product 6" quality="50">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">MYPROTEIN Impact ホエイプロテイン ナチュラルチョコレート</h5>
+                                            <p class="card-text">商品の説明や特徴などをここに記述します。</p>
+                                            <a href="https://www.myprotein.jp/sports-nutrition/impact-whey-protein/10530943.html"
+                                                class="btn btn-primary" target="_blank" id="btn1">公式サイト</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12" data-category="equip">
+                            <div class="card mb-4" id="precard-container">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img src="{% static 'workout/images/product/product7.png' %}"
+                                            class="card-img-top" alt="Product 7" quality="50">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">LEADING EDGE インクラインベンチ デクラインベンチ LE-B80</h5>
+                                            <p class="card-text">商品の説明や特徴などをここに記述します。</p>
+                                            <a href="https://leadingedge-jp.com/lineup/training-bench/le-b80/" 
+                                                class="btn btn-primary" target="_blank" id="btn1">公式サイト</a>
+
+                                            <a href="https://www.amazon.co.jp/dp/B077H2PLCV/ref=sspa_dk_detail_1?pd_rd_i=B077H2PLCV&pd_rd_w=5OXm1&content-id=amzn1.sym.bd54db78-5863-4bcf-a990-7929193ebe33&pf_rd_p=bd54db78-5863-4bcf-a990-7929193ebe33&pf_rd_r=FME9G1VT99465BVKT5Y6&pd_rd_wg=mj4AJ&pd_rd_r=03e55666-fe98-4466-9b8e-89ea86e621af&s=sports&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM&th=1" 
+                                                class="btn btn-primary" target="_blank" id="btn2">Amazon</a>
+
+                                            <a href="https://item.rakuten.co.jp/esportskenko/9651513090034/?variantId=3169996&scid=s_kwa_pla_unpaid_205054&srsltid=AfmBOoqRQ6R16xUxkDQDjMlURnDqKwtjHvf7Gl22zFB5yV5sBLcDzjJFrfU" 
+                                                class="btn btn-primary" target="_blank" id="btn3">楽天市場</a>
+
+                                            <a href="https://store.shopping.yahoo.co.jp/esports/9651513090034.html" 
+                                                class="btn btn-primary" target="_blank" id="btn4">Yahoo!</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12" data-category="equip">
+                            <div class="card mb-4" id="precard-container">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img src="{% static 'workout/images/product/product8.png' %}"
+                                            class="card-img-top" alt="Product 8" quality="50">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">ALLOUT トレーニングベルト パワーベルト</h5>
+                                            <p class="card-text">商品の説明や特徴などをここに記述します。</p>
+                                            <a href="https://all-out-fitness.jp/products/mmlb" class="btn btn-primary" target="_blank"
+                                                id="btn1">公式サイト</a>
+
+                                            <a href="https://www.amazon.co.jp/ALLOUT-%E3%83%91%E3%83%AF%E3%83%BC%E3%83%AA%E3%83%95%E3%83%88%E3%83%99%E3%83%AB%E3%83%88-%E3%83%AA%E3%83%95%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%99%E3%83%AB%E3%83%88-M%E3%82%B5%E3%82%A4%E3%82%BA-%E3%83%AF%E3%82%A4%E3%83%89%E3%82%BF%E3%82%A4%E3%83%97/dp/B08B7V351H/ref=sr_1_10?keywords=%E3%83%91%E3%83%AF%E3%83%BC%E3%83%99%E3%83%AB%E3%83%88&qid=1706104215&sr=8-10&th=1" 
+                                            class="btn btn-primary" target="_blank" id="btn2">Amazon</a>
+
+                                            <a href="https://item.rakuten.co.jp/toripurussss/mmlb/?variantId=864&scid=af_pc_etc&sc2id=af_113_0_10001868&gclid=Cj0KCQiAh8OtBhCQARIsAIkWb6-3CbYw8bgrozjfzQoU_pSUclf0Zvj1VPapgVAfogBVUIOX4Limc2waAvW1EALw_wcB&icm_agid=&iasid=wem_icbs_&ifd=57&icm_acid=255-776-8501&icm_cid=18512743829" 
+                                                class="btn btn-primary" target="_blank" id="btn3">楽天市場</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="col-lg-12" data-category="foods">
+                            <div class="card mb-4" id="precard-container">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img src="{% static 'workout/images/product/product.png' %}"
+                                            class="card-img-top" id="card-img-top" alt="Product " quality="50">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">商品名</h5>
+                                            <p class="card-text">商品の説明や特徴などをここに記述します。</p>
+                                            <a href="example.html" class="btn btn-primary" target="_blank" id="btn1">公式サイト</a>
+
+                                            <a href="/product/1" class="btn btn-primary" target="_blank" id="btn2">Amazon</a>
+
+                                            <a href="/product/1" class="btn btn-primary" target="_blank" id="btn3">楽天市場</a>
+
+                                            <a href="/product/1" class="btn btn-primary" target="_blank">詳細を見る</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+
+                    </div>
+                </div>
+        </div>
+        </section>
+
+        <footer class="footer fixed-bottom no-margin-bottom">
+            <div class="footer__block block no-margin-bottom">
+                <div class="container-fluid text-center">
+                    <p class="no-margin-bottom">2025 &copy; PowerDiary2</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js">
+    </script>
+    <script src="{% static 'workout/javascript/bootstrap.min.js' %}"></script>
+    <script src="{% static 'workout/javascript/jquery.cookie.js' %}">
+    </script>
+    <script src="{% static 'workout/javascript/front.js' %}"></script>
+    <script src="{% static 'workout/javascript/footer.js' %}"></script>
+    <script src="{% static 'workout/javascript/sort.js' %}"></script>
+</body>
+
+</html>

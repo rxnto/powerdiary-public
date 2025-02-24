@@ -1,0 +1,38 @@
+/* static/workout/css/model.css */
+
+.svg-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #212529;
+}
+
+.front-view, .back-view {
+    flex: 1;
+    max-width: 350px;
+    padding: 1rem;
+    background-color: #999999;
+    border-radius: 8px;
+}
+
+.muscle-group path {
+    transition: fill 0.3s ease;
+}
+
+.muscle-group path:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+h3 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+svg {
+    width: 100%;
+    height: auto;
+    min-height: 500px;
+}

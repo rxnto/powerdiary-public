@@ -1,0 +1,52 @@
+/* static/workout/css/custom.css に追加 */
+
+.exercise-options {
+    display: flex;
+    align-items: center;
+    gap: 20px;  /* チェックボックス間の間隔 */
+    margin-bottom: 20px;
+}
+
+.exercise-option {
+    display: flex;
+    align-items: center;
+}
+
+.exercise-option input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.exercise-option label {
+    margin: 0;
+    font-size: 1rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+#target_muscle {
+    position: relative;
+  }
+  
+  #target_muscle option {
+    max-height: 600px; /* この値は適宜調整してね */
+    overflow-y: auto;
+  }
+  
+  .form-control {
+    display: block !important;
+    transform-origin: top center !important;
+    transform: scaleY(1) !important;
+  }
+  
+  .select-dropdown {
+    max-height: 200px; /* ドロップダウンの最大高さを設定 */
+    overflow-y: auto; /* スクロール可能にする */
+    position: absolute;
+    top: 100%; /* 必ず選択ボックスの下に表示 */
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }

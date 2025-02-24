@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PowerDiary2</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    {% load static %}
+    <link rel="icon" href="{% static 'workout/images/fav.png' %}">
+    <link rel="stylesheet" href="{% static 'workout/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'workout/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'workout/css/font.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,700">
+    <link rel="stylesheet" href="{% static 'workout/css/style.red.css' %}" id="theme-stylesheet">
+    <link rel="stylesheet" href="{% static 'workout/css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'workout/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'workout/css/add_workout.css' %}">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="search-panel">
+                <div class="search-inner d-flex align-items-center justify-content-center">
+                    <div class="close-btn">Close <i class="fa fa-close"></i></div>
+                    <form id="searchForm" action="#">
+                        <div class="form-group">
+                            <input type="search" name="search" placeholder="What are you searching for...">
+                            <button type="submit" class="submit">Search</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="container-fluid d-flex align-items-center justify-content-between ">
+                <div class="navbar-header">
+                    <a href="/dashboard" class="navbar-brand">
+                        <div class="brand-text brand-big visible text-uppercase"><strong class="text-primary">Power</strong><strong>Diary</strong><strong class="text-primary">2</strong></div>
+                        <div class="brand-text brand-sm"><img src="{% static 'workout/images/fav_navbar.png' %}" alt="Pd" class="fav_navbar"></div>
+                    </a>
+                </div>
+                <ul class="right-menu list-inline no-margin-bottom">
+                    <li class="list-inline-item"><a href="#" class="search-open nav-link"><i class="icon-magnifying-glass-browser"></i></a></li>
+                    <li class="list-inline-item logout"><a id="logout" href="/user/logout" class="nav-link">ログアウト <i class="icon-logout"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="d-flex align-items-stretch ">
+        <nav id="sidebar" class="shrinked"><!-- shrinked追加 -->
+            <div class="sidebar-header d-flex align-items-center "></div>
+            <ul class="list-unstyled">
+                <li><a href="/dashboard"><i class="icon-home"></i>ホーム</a></li>
+                <li class=""><a href="/workout"><i class="fa fa-plus-square"></i>記録</a></li>
+                <li> <a href="/workouts"><i class="fa fa-th-list"></i>一覧</a></li>
+                <li><a href="/model"><i class="fa fa-child"></i>模型</a></li>
+                <li><a href="/history"><i class="fa fa-list"></i>履歴</a></li>
+                <li><a href="/calc"><i class="fa fa-calculator"></i>計算</a></li>
+                <li><a href="/prelusion"><i class="fa fa-info-circle"></i>紹介</a></li>
+                <li><a href="/chat"><i class="fa fa-comments"></i>チャット</a></li>
+            </ul>
+        </nav>
+        <div class="page-content active"><!-- active化 -->
+            <div class="page-header">
+                <div class="container-fluid">
+                    <h2 class="h5 no-margin-bottom">Edit Workout</h2>
+                </div>
+            </div>
+            <section class="no-padding-bottom">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <form id="update-workout-form" action="/workout/{{ workout.id }}/edit" method="POST">
+                                {% csrf_token %}
+                                <!-- Edit Workout Errors -->
+                                {% if messages %} {% for message in messages %} {% if message.tags == "edit error" %}
+                                <div class="alert alert-danger alert-dismissable" role="alert">
+                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                    <strong>エラー!</strong> {{ message }}
+                                </div>
+                                {% endif %} {% endfor %} {% endif %}
+                                <!-- Workout Name -->
+                                <div class="form-group">
+                                    <input id="name" type="text" name="name" required class="input-material form-control-lg" placeholder="名前" value="{{ workout.name }}">
+                                </div>
+                                <!-- Workout Description -->
+                                <div class="form-group">
+                                    <input id="description" type="text" name="description" class="input-material form-control-lg" placeholder="説明・メモ" value="{{ workout.description }}">
+                                </div>
+                                <!-- Update Workout Button -->
+                                <input id="update" type="submit" value="変更" class="btn btn-success btn-lg mr-2">
+                                <!-- Back Button -->
+                                <a href="/workout/{{ workout.id }}" class="btn btn-outline-secondary btn-lg mr-2">戻る</a>
+                                <!-- Delete Button -->
+                                <a id="delete-workout" href="/workout/{{ workout.id }}/delete" class="btn btn-outline-danger btn-lg">削除</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="footer fixed-bottom no-margin-bottom">
+                <div class="footer__block block no-margin-bottom">
+                    <div class="container-fluid text-center">
+                        <p class="no-margin-bottom">2025 &copy; PowerDiary2</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js">
+    </script>
+    <script src="{% static 'workout/javascript/bootstrap.min.js' %}"></script>
+    <script src="{% static 'workout/javascript/jquery.cookie.js' %}">
+    </script>
+    <script src="{% static 'workout/javascript/front.js' %}"></script>
+    <script src="{% static 'workout/javascript/exercise.js' %}"></script>
+    <script src="{% static 'workout/javascript/add_workout.js' %}"></script>
+</body>
+
+</html>

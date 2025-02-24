@@ -1,0 +1,33 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.login),
+    path('user/register', views.register),
+    path('user/login', views.login),
+    path('user/logout', views.logout),
+    path('dashboard', views.dashboard),
+    path('workout', views.new_workout),
+    path('workout/<int:id>', views.workout),
+    path('workout/<int:id>/exercise', views.exercise),
+    path('workout/<int:id>/complete', views.complete_workout),
+    path('workout/<int:id>/edit', views.edit_workout),
+    path('workout/<int:id>/delete', views.delete_workout),
+    path('workouts', views.all_workouts),
+    path('legal/tos', views.tos),
+    path('prelusion', views.prelusion),
+    path('calc', views.calc),
+    path('chat', views.chat),
+    path('model', views.model),
+    path('duplicate-exercise/<int:exercise_id>/<int:workout_id>/', views.duplicateExercise, name='duplicate-exercise'),
+    path('chat_response/', views.chat_response, name='chat_response'),
+    path('api/muscle-counts/', views.get_muscle_counts, name='get-muscle-counts'),
+    path('history', views.history),
+    path('api/monthly-muscle-counts/<int:year>/<int:month>/', views.get_monthly_muscle_counts, name='get-monthly-muscle-counts'),
+    path('api/advance-month/', views.advance_month, name='advance-month'),
+    path('chat/save-history/', views.save_chat_history, name='save-chat-history'),
+    path('chat/histories/', views.get_chat_histories, name='get-chat-histories'),
+    path('chat/history/<int:history_id>/', views.get_chat_messages, name='get-chat-messages'),
+    path('chat/history/<int:history_id>/delete/', views.delete_chat_history, name='delete-chat-history'),
+    path('workout/<int:workout_id>/exercise/<int:exercise_id>/delete/', views.delete_exercise, name='delete_exercise'),
+]

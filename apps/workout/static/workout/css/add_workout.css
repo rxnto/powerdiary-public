@@ -1,0 +1,24 @@
+.workout-dropdown {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background: #414449;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    color: #ffffff;
+  }
+  
+  .category {
+    padding: 12px 16px;
+    cursor: pointer;
+  }
+  
+  .category:hover {
+    background: #5b6067;
+  }
+  
+  .form-group {
+    position: relative;
+  }

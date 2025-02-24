@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PowerDiary2</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    {% load static %}
+    <link rel="icon" href="{% static 'workout/images/fav.png' %}">
+    <link rel="stylesheet" href="{% static 'workout/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'workout/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'workout/css/font.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,700">
+    <link rel="stylesheet" href="{% static 'workout/css/style.red.css' %}" id="theme-stylesheet">
+    <link rel="stylesheet" href="{% static 'workout/css/custom.css' %}">
+  </head>
+  <body>
+    <div class="login-page">
+      <div class="container d-flex align-items-center">
+        <div class="form-holder has-shadow">
+          <div class="row">
+            <!-- Logo & Information Panel-->
+            <div class="col-lg-6">
+              <div class="info d-flex align-items-center">
+                <div class="content">
+                  <div class="logo">
+                    <h1 class="display-3">PowerDiary2</h1>
+                  </div>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+            <!-- Form Panel    -->
+            <div class="col-lg-6 bg-white">
+              <div class="form d-flex align-items-center">
+                <div class="content">
+                  <form id="register-form" action="/user/register" method="POST">
+                    {% csrf_token %}
+                    <!-- Registration Errors -->
+                    {% if messages %}
+                        {% for message in messages %}
+                            {% if message.tags == "registration error" %}
+                            <div class="alert alert-danger alert-dismissable" role="alert">
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                <strong>エラー!</strong> {{ message }}
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                    <!-- Username -->
+                    <div class="form-group">
+                      <input id="username" type="text" pattern="[A-Za-z0-9]*" name="username" required class="input-material form-control-lg less-dark" placeholder="ユーザーネーム">
+                    </div>
+                    <!-- Email Address -->
+                    <!-- <div class="form-group">
+                      <input id="email" type="email" name="email" required class="input-material form-control-lg less-dark" placeholder="Email Address">
+                    </div> -->
+                    <!-- Password -->
+                    <div class="form-group">
+                      <input id="password" type="password" name="password" required class="input-material form-control-lg less-dark" placeholder="パスワード">
+                    </div>
+                    <!-- Password Confirm -->
+                    <div class="form-group">
+                      <input id="password_confirmation" type="password" name="password_confirmation" required class="input-material form-control-lg less-dark" placeholder="確認用パスワード">
+                    </div>
+                    <!-- TOS Policy -->
+                    <div class="form-group terms-conditions">
+                      <input id="license" type="checkbox" class="checkbox-template" required name="tos_accept">
+                      <label for="license" class="no-margin-bottom"><a href="/legal/tos" target="_blank">利用規約</a>に同意する</label>
+                    </div>
+                    <!-- Register Button -->
+                    <input id="register" type="submit" value="登録" class="btn btn-primary btn-lg">
+                  </form><small>すでにアカウントをお持ちですか？ </small><a href="/" class="signup">ログイン</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"> </script>
+    <script src="{% static 'workout/javascript/bootstrap.min.js' %}"></script>
+    <script src="{% static 'workout/javascript/jquery.cookie.js' %}"> </script>
+    <script src="{% static 'workout/javascript/front.js' %}"></script>
+  </body>
+</html>

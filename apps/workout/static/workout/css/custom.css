@@ -1,0 +1,372 @@
+/*    GENERAL   */
+
+.col-lg-6 {
+	background-color: #000;
+}
+
+.btn-secondary {
+	background-color: #474b4e;
+	border-color: #45494d;
+}
+
+.search-open.nav-link {
+	display: none;
+}
+
+input.input-material:focus {
+	background-color: rgba(255, 255, 255, 0.03);
+}
+
+
+/*    LOGIN / REGISTER   */
+
+.form-control-lg, .input-group-lg > .form-control, .input-group-lg > .input-group-addon, .input-group-lg > .input-group-btn > .btn {
+	border-radius:0rem;
+}
+
+input.input-material:focus {
+	border-color: #ff3f3f;
+	border-radius: 0rem !important;
+	-webkit-border-radius: 0rem !important;
+	border-top: 0px;
+	border-right: 0px;
+	border-left: 0px;
+}
+
+input.input-material.less-dark {
+	background: #2D3035;
+}
+
+.login-page .form-holder .info {
+	background: rgba(33, 37, 41, 0.35) !important;
+	color: #ffffff;
+	text-shadow: 1px 1px 1px #000;
+}
+
+.color-white {
+  color: #ffffff;
+}
+
+.login-page .form-holder .info, .login-page .form-holder .form {
+	min-height: 0vh;
+}
+
+input.input-material {
+	padding: 10px;
+	color: #fff;
+	text-shadow:1px 1px 1px #000;
+}
+
+.display-3 {
+	font-size: 4.5rem !important;
+	font-weight: 300 !important;
+	line-height: 1.1 !important;
+}
+
+.login-page .form-holder .info p {
+	font-size: 1.3em;
+}
+
+.alert-danger {
+	background-color: #f8b4be;
+	border-color: #f8b4be;
+}
+
+@media only screen and (max-width: 600px)  {
+  .display-3 {
+    font-size: 2rem !important;
+  }
+	.display-3-intro-subtext {
+		font-size: 1rem !important;
+	}
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 993px)  {
+	.display-3 {
+		font-size: 3.5rem !important;
+	}
+}
+
+
+/*         DASHBOARD         */
+
+.img-fluid.rounded-circle {
+	margin-top: 9px;
+}
+
+nav#sidebar .avatar {
+	min-width: initial;
+	max-width: initial;
+	min-height: initial;
+	max-height: initial;
+	border-radius: 0%;
+	overflow: auto;
+	margin-right: 0px;
+	padding: 0px;
+	border: none;
+}
+
+.title {
+	margin-left: 15px;
+}
+
+.img-fluid.rounded-circle.avatar {
+	height: 50px;
+	width: 58px;
+	margin-right: 10px;
+	margin-bottom: 5px;
+	margin-top: auto;
+}
+
+nav#sidebar ul a i .fa.fa-plus-square {
+	padding-right: 3px;
+}
+
+i.fa.fa-plus-square {
+	padding-right: 23px !important;
+}
+
+
+.card-link:hover {
+	color: #BFC1BB;
+}
+
+
+.page-link {
+	border:none !important;
+}
+
+/* xs */
+@media only screen and (max-width: 767px)  {
+  .card-columns {
+    column-count: 1;
+  }
+}
+/* sm */
+@media only screen and (max-width: 991px) and (min-width: 768px)  {
+	.card-columns {
+		column-count: 2;
+	}
+}
+/* md */
+@media only screen and (max-width: 1199px) and (min-width: 992px)  {
+	.card-columns {
+		column-count: 3;
+	}
+}
+/* lg */
+@media only screen and (min-width: 1200px)  {
+	.card-columns {
+		column-count: 4;
+	}
+}
+
+
+/*         WORKOUT         */
+
+.bg-dark.add-exercise {
+	background-color: #1d2023 !important;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+	appearance: textfield;
+}
+
+.fa.fa-remove.delete-exercise {
+	color: #ff3f3f;
+}
+.fa.fa-remove.delete-exercise:hover {
+	color: #ff1919;
+}
+
+
+/*      ALL WORKOUTS       */
+
+
+.all-workouts-table {
+	color: whitesmoke;
+}
+
+.view-link {
+	color: #34D2ED;
+}
+
+.view-link:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+
+/*         FOOTER         */
+
+a.sasquatch-footer-link {
+	color: #8a8d93;
+}
+
+a.sasquatch-footer-link:hover {
+	background-color: #ff3f3f;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	color: rgba(255, 255, 255, 0.85);
+	text-decoration: none;
+}
+
+a.sasquatch-footer-link:focus, a.sasquatch-footer-link:active {
+	color: #ff3f3f;
+	background-color: #2d3035;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+
+/*         PRELUSION         */
+
+#precard-container {
+	background-color: #3f4249;
+	color: #fff;
+}
+
+.card-img-top {
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-bottom: 20px;
+	max-width: 150px;
+	max-height: 225px;
+}
+
+#btn1 {
+	background-color: #000;
+	border-color: #000;
+}
+#btn2 {
+	background-color: #ffbb00bd;
+	border-color: #ffbb00bd;
+}
+#btn3 {
+	background-color: #be0000;
+	border-color: #be0000;
+}
+#btn4 {
+	background-color: #ff6600;
+	border-color: #ff6600;
+}
+
+#category-filter {
+	margin-left: 15px;
+	border-radius: 5px;
+	text-align-last: center;
+	width: 100px;
+	height: 50px;
+	background-color: #000;
+	border-color: #000;
+	color: #fff;
+}
+
+#youtube-icon {
+	font-size: 1.4em;
+	color: #ff0000;
+}
+
+#copy-btn-icon {
+	font-size: 1.3em;
+}
+
+/* body::-webkit-scrollbar {
+    display: none;
+} */
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+  
+::-webkit-scrollbar-thumb {
+	background-color: #000;
+	border-radius: 6px;
+}
+  
+::-webkit-scrollbar-track {
+	background-color: #2d3035;
+}
+
+#proteinrec {
+	color: #fff;
+}
+
+/* custom.cssに追加 */
+.modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    color: #fff;
+}
+
+.modal-content p {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.modal-button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.modal-button.cancel {
+    background-color: #666;
+    color: white;
+}
+
+.modal-button.cancel:hover {
+    background-color: #888;
+}
+
+.modal-button.delete {
+    background-color: #ff2b2b;
+    color: white;
+}
+
+.modal-button.delete:hover {
+    background-color: #ff6060;
+}
