@@ -59,7 +59,8 @@
 - 回数・重量を入力して「追加」を押すと、1セット分が記録される。
 ![3c](https://github.com/user-attachments/assets/ea1fa50c-747c-4ba3-850d-408c5bb99984)
 - 追加を押すと、図のようになり、動作を確認したい場合は、YouTubeアイコンをクリックすると、種目名の検索結果のYouTubeページに遷移。
-- コピーボタンを押すと、繰り返し行った種目をこぴーできる。
+- コピーボタンを押すと、繰り返し行った種目をコピーできる。
+- ×ボタンは削除。
 
 ## 6. 記録一覧表
 ![4](https://github.com/user-attachments/assets/1b385196-99d6-4b40-bd05-fe9846fb2f46)
@@ -71,7 +72,27 @@
 - 各回数10回で色の濃さが最大になる。（図は胸筋が10回、腹筋が5回）
 - 2D解剖モデル部分をクリックすると、前面・背面それぞれの拡大図が表示される。
 
+## 8. 履歴
+![6](https://github.com/user-attachments/assets/61ba8078-3f7f-4dcc-b3b2-3c1cbe59a26e)
+- 履歴には、月が替わったタイミングで、更新され今月分のトレーニング内容が保存される。
+- 月が替わったタイミングで、今月分の記録はリセット。
 
+## 9. タンパク質摂取量計算
+![7](https://github.com/user-attachments/assets/bd4cba2f-1c66-42ff-a073-c5a0a6bfe5df)
+![7a](https://github.com/user-attachments/assets/b6c180fa-85e0-4216-bf6b-4e8a1ed22600)
+- その日に接種したタンパク質が、筋肥大に効果的かを判定。
+- 体重×2.0～gの場合は緑色の顔文字
+- 体重×1.4～1.9gの場合は水色の顔文字
+- 体重×1.3～1.0gの場合は黄色の顔文字
+- 体重×1.0g未満の場合は赤色の顔文字
+
+## 10. グッズ紹介
+![8](https://github.com/user-attachments/assets/c65eeda5-7136-402f-b50d-5f203d63ceae)
+- どのようなグッズを買えばいいかわからない初心者のアドバイス的機能。
+
+# 11. チャットAI
+![9](https://github.com/user-attachments/assets/7275abe0-1127-4dc3-a1d8-fb0450d9ade3)
+- AzureOpenAIのAPIの期限が切れているので現在使用できません。
 
 # Lisence
 
