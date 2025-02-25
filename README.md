@@ -15,9 +15,12 @@
 - 仮想環境を構築&仮想環境に入る（Windows）
 ```sh
    python -m venv venv
-```
-```sh
    source venv/Scripts/activate
+```
+- 仮想環境を構築&仮想環境に入る（Mac）
+```sh
+   python -m venv venv
+   source venv/bin/activate
 ```
 - 必要なパッケージをインストール:
 ```sh
