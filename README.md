@@ -14,10 +14,10 @@
 ```
 - 必要なパッケージをインストール:
 ```sh
-pip install -r requirements.txt
+   pip install -r requirements.txt
 ```
 
 - ローカルで実行する
 ```sh
-python manage.ppy runserver
+   python manage.ppy runserver
 ```
