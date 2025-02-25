@@ -32,6 +32,8 @@
    python manage.ppy runserver
 ```
 
+https://github.com/rxnto/powerdiary-public/issues/1#issue-2877002350
+
 
 # Lisence
 
