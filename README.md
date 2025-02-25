@@ -6,3 +6,8 @@
 - **バックエンド:** Python (Django)
 - **データベース:** SQLite
 - **デプロイ:** PythonAnywhere
+
+## 🚀 インストール方法
+このリポジトリをクローンする:
+   ```sh
+   git clone https://github.com/your-username/your-repo.git
