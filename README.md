@@ -58,6 +58,16 @@
 - 部位ごとに予め用意された王道種目を選択するか、任意の種目を設定する
 - 回数・重量を入力して「追加」を押すと、1セット分が記録される
 
+## 6. 記録一覧表
+![4](https://github.com/user-attachments/assets/1b385196-99d6-4b40-bd05-fe9846fb2f46)
+
+## 7. 模型
+![5](https://github.com/user-attachments/assets/d1a35994-b6fc-4fba-a2b4-826ff74077ee)
+![5a](https://github.com/user-attachments/assets/176365fe-121f-441c-a2a4-289bccc0b72f)
+- 鍛えた部位に色がつき、一目でどこを鍛えているか、トレーニング状況がわかるようになっている。
+- 各回数10回で色の濃さが最大になる。（図は胸筋が10回、腹筋が5回）
+- 2D解剖モデル部分をクリックすると、前面・背面それぞれの拡大図が表示される。
+
 
 
 # Lisence
