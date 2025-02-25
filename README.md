@@ -37,8 +37,8 @@
 
 ## 2. 新規登録画面
 ![Image](https://github.com/user-attachments/assets/80975a7a-580f-4c16-bf01-d855ec8a9d3b)
-- ユーザーネームは半角英数字2文字以上
-- パスワードは半角英数字8文字以上
+- ユーザーネームは半角英数字2文字以上。
+- パスワードは半角英数字8文字以上。
 
 ## 3. ホーム画面
 ![Image](https://github.com/user-attachments/assets/d8d480e1-0c16-4739-971a-8fb8f3f106a9)
@@ -47,16 +47,19 @@
 ![Image](https://github.com/user-attachments/assets/fe8204f2-4788-4a77-b437-d83ae5710e07)
 
 ![Image](https://github.com/user-attachments/assets/8069fe4c-775f-467f-8734-4eec465b4c6a)
-- 名前は1文字以上
-- 名前はドロップダウンで選ぶか、任意で設定
-- 説明・メモは0～150字以内
+- 名前は1文字以上。
+- 名前はドロップダウンで選ぶか、任意で設定。
+- 説明・メモは0～150字以内。
 
 ## 5. 記録画面
 ![3a](https://github.com/user-attachments/assets/1dafdfd1-1977-4228-9b18-e9ab50c082ba)
 ![3b](https://github.com/user-attachments/assets/cf19dc33-5554-4dbd-8a0c-c468221e5c04)
 - ターゲット部位を選択する
-- 部位ごとに予め用意された王道種目を選択するか、任意の種目を設定する
-- 回数・重量を入力して「追加」を押すと、1セット分が記録される
+- 部位ごとに予め用意された王道種目を選択するか、任意の種目を設定する。
+- 回数・重量を入力して「追加」を押すと、1セット分が記録される。
+![3c](https://github.com/user-attachments/assets/ea1fa50c-747c-4ba3-850d-408c5bb99984)
+- 追加を押すと、図のようになり、動作を確認したい場合は、YouTubeアイコンをクリックすると、種目名の検索結果のYouTubeページに遷移。
+- コピーボタンを押すと、繰り返し行った種目をこぴーできる。
 
 ## 6. 記録一覧表
 ![4](https://github.com/user-attachments/assets/1b385196-99d6-4b40-bd05-fe9846fb2f46)
