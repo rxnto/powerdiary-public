@@ -8,6 +8,16 @@
 - **デプロイ:** PythonAnywhere
 
 ## 🚀 インストール方法
-このリポジトリをクローンする:
-   ```sh
-   git clone 
+- このリポジトリをクローンする:
+```sh
+   git clone https://github.com/rxnto/powerdiary-public.git
+```
+- 必要なパッケージをインストール:
+```sh
+pip install -r requirements.txt
+```
+
+- ローカルで実行する
+```sh
+python manage.ppy runserver
+```
