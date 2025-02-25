@@ -40,6 +40,8 @@
 - ユーザーネームは半角英数字2文字以上
 - パスワードは半角英数字8文字以上
 
+## ホーム画面
+![Image](https://github.com/user-attachments/assets/d8d480e1-0c16-4739-971a-8fb8f3f106a9)
 
 # Lisence
 
