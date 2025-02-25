@@ -32,9 +32,6 @@
    python manage.ppy runserver
 ```
 
-![スクリーンショット](https://github.com/rxnto/powerdiary-public/issues/1#issue-2877002350)
-
-
 # Lisence
 
 This project is licensed under the MIT License, see the LICENSE.txt file for details
