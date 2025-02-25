@@ -36,7 +36,7 @@
 ![Image](https://github.com/user-attachments/assets/8f235ef8-efce-406e-835f-10e593dbe81a)
 
 ## 新規登録画面
-
+![Image](https://github.com/user-attachments/assets/80975a7a-580f-4c16-bf01-d855ec8a9d3b)
 - ユーザーネームは半角英数字2文字以上
 - パスワードは半角英数字8文字以上
 
