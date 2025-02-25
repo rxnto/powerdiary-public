@@ -12,6 +12,13 @@
 ```sh
    git clone https://github.com/rxnto/powerdiary-public.git
 ```
+- 仮想環境を構築&仮想環境に入る（Windows）
+```sh
+   python -m venv venv
+```
+```sh
+   source venv/Scripts/activate
+```
 - 必要なパッケージをインストール:
 ```sh
    pip install -r requirements.txt
