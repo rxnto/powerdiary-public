@@ -2,8 +2,6 @@ from django.db import models
 import re
 from django.contrib.auth.hashers import make_password, check_password
 from decimal import *
-
-# 1/28
 from datetime import date
 from datetime import datetime
 

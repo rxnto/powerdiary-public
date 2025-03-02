@@ -11,8 +11,6 @@
     {% load static %}
     <link rel="icon" href="{% static 'workout/images/fav.png' %}">
     <link rel="stylesheet" href="{% static 'workout/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'workout/css/font-awesome.min.css' %}">
-    <link rel="stylesheet" href="{% static 'workout/css/font.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,700">
     <link rel="stylesheet" href="{% static 'workout/css/style.red.css' %}" id="theme-stylesheet">
     <link rel="stylesheet" href="{% static 'workout/css/custom.css' %}">
@@ -55,7 +53,7 @@
         <nav id="sidebar" class="shrinked"><!-- shrinked追加 -->
             <div class="sidebar-header d-flex align-items-center "></div>
             <ul class="list-unstyled">
-                <li><a href="/dashboard"><i class="icon-home"></i>ホーム</a></li>
+                <li><a href="/dashboard"><i class="fa fa-home"></i>ホーム</a></li>
                 <li><a href="/workout"><i class="fa fa-plus-square"></i>記録</a></li>
                 <li> <a href="/workouts"><i class="fa fa-th-list"></i>一覧</a></li>
                 <li><a href="/model"><i class="fa fa-child"></i>模型</a></li>
@@ -323,7 +321,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js">
     </script>
-    <script src="{% static 'workout/javascript/bootstrap.min.js' %}"></script>
     <script src="{% static 'workout/javascript/jquery.cookie.js' %}">
     </script>
     <script src="{% static 'workout/javascript/front.js' %}"></script>
