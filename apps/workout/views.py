@@ -428,8 +428,8 @@ def calc(request):
 def chat(request):
     return render(request, 'workout/chat.html')
 
-endpoint = "https://kcg-openai-instance.openai.azure.com/"
-api_key = "873198d21c634d00931dba12f72667b2"
+endpoint = "https://xxx.azure.com/"
+api_key = "XXX"
 deployment = "gpt-4o"
 
 
